@@ -1,3 +1,43 @@
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v20-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v20-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-cyrillic_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-500 - cyrillic_latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v20-cyrillic_latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/roboto-v20-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-cyrillic_latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-cyrillic_latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-cyrillic_latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-cyrillic_latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-700 - cyrillic_latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v20-cyrillic_latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+       url('../fonts/roboto-v20-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-cyrillic_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-cyrillic_latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-cyrillic_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-cyrillic_latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
 html,
 body {
     margin: 0;
@@ -6,7 +46,7 @@ body {
 body {
     font-size: 18px;
     line-height: 1.2;
-    font-family: Roboto, "Arial", sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 a {
@@ -566,7 +606,6 @@ input[type="radio"].visually-hidden {
 
 .ice-creams-list {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 0;
@@ -583,15 +622,23 @@ input[type="radio"].visually-hidden {
     position: relative;
 
     box-sizing: border-box;
-    width: 267px;
-    padding-top: 6px;
-    padding-bottom: 17px;
+    width: 293px;
+    padding-top: 5px;
+    padding-bottom: 18px;
+}
+
+.ice-creams-item:nth-child(4n-3) {
+    margin-left: -13px;
+}
+
+.ice-creams-item:nth-child(4n) {
+    margin-right: -13px;
 }
 
 .ice-creams-item h3 {
     margin: 0;
     margin-bottom: 15px;
-    padding: 0 5px;
+    padding: 0 18px;
 
     font-size: 16px;
     font-weight: 500;
@@ -615,9 +662,9 @@ input[type="radio"].visually-hidden {
 
 .ice-cream-price {
     display: block;
-    top: 215px;
-    margin-top: -63px;
+    margin-top: -56px;
     margin-bottom: 21px;
+    padding-left: 10px;
 
     font-size: 45px;
     font-weight: 700;
@@ -628,6 +675,11 @@ input[type="radio"].visually-hidden {
 .ice-cream-price::after {
     content: "/кг";
     font-size: 30px;
+}
+
+.ice-cream-price i {
+    font-style: normal;
+    margin-left: 4px;
 }
 
 .quick-view-link {
@@ -657,6 +709,13 @@ input[type="radio"].visually-hidden {
 
 .ice-creams {
     margin-bottom: 7px;
+}
+
+.ice-cream-pic {
+    display: block;
+
+    width: 267px;
+    margin: 0 auto;
 }
 
 .advantages {
@@ -1286,15 +1345,15 @@ input[type="radio"].visually-hidden {
 
 .modal-feedback {
     position: fixed;
-    top: 120px;
+    top: 15%;
     left: 50%;
+    transform: translate(-50%, -15%);
     z-index: 10;
 
     display: none;
     box-sizing: border-box;
     width: 477px;
     padding: 20px 24px 25px;
-    margin-left: -237px;
 
     background-color: #f8f7f4;
     border-radius: 8px;
@@ -1385,31 +1444,31 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
     display: block;
-    animation: bounce 0.6s;
+    animation: bounce 0.8s;
 }
 
 @keyframes bounce {
     0% {
-    transform: translateY(-2000px);
+    transform: translate(-50%,-2000px);
   }
 
   70% {
-    transform: translateY(30px);
+    transform: translate(-50%,30px);
   }
 
   90% {
-    transform: translateY(-10px);
+    transform: translate(-50%,-10px);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translate(-50%,0);
   }
-};
+}
 
 @keyframes shake {
     0%,
   100% {
-    transform: translateX(0);
+    transform: translate(-50%,-15%);
   }
 
   10%,
@@ -1417,19 +1476,19 @@ input[type="radio"].visually-hidden {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-52%,-15%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-48%,-15%);
   }
-};
+}
 
 .modal-error {
-    animation: shake 2s;
+    animation: shake 0.6s;
 }
 
 .site-wrapper-catalog {
@@ -1630,16 +1689,19 @@ input[type="radio"].visually-hidden {
 }
 
 .paginator {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
     align-self: flex-end;
 
     width: 205px;
     margin: 0;
     margin-right: -9px;
     padding: 0;
+
+    list-style: none;
 }
 
 .paginator a {

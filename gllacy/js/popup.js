@@ -1,9 +1,9 @@
 var popup_open_but = document.querySelector(".button-feedback");
 var popup = document.querySelector(".modal-feedback");
 var popup_close_but = popup.querySelector(".close-button");
-var popup_username_input = popup.querySelector("[name=input-user-name]");
-var popup_email_input = popup.querySelector("[name=input-email]");
-var popup_feedback_text = popup.querySelector("[name=feedback-text]");
+var popup_username_input = popup.querySelector("[name='input-user-name']");
+var popup_email_input = popup.querySelector("[name='input-email']");
+var popup_feedback_text = popup.querySelector("[name='feedback-text']");
 var form = popup.querySelector(".form-feedback");
 
 var isStorageSupport = true;
@@ -34,13 +34,13 @@ popup_close_but.addEventListener("click", function(evt) {
 
 form.addEventListener("submit", function(evt) {
     if (!popup_username_input.value || !popup_email_input.value || !popup_feedback_text.value) {
-    evt.preventDefault();
-    popup.classList.remove("modal-error");
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modal-error");
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
     } else {
     if (isStorageSupport) {
-    local.Storage.setItem("user_email",popup_email_input.value);
+    localStorage.setItem("user_email",popup_email_input.value);
         }
     }
 });
