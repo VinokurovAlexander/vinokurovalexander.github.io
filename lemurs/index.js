@@ -1,3 +1,16 @@
+const Validate = {
+  value: {
+    MIN: 0,
+    MAX: 1000
+  }
+}
+
+Validate.message = {
+  min: 'Необходимо указать число больше ' + Validate.value.MIN,
+  max: 'Необходимо указать число не больше ' + Validate.value.MAX,
+  noData: 'Необходимо сгенерировать данные'
+};
+
 class Animal {
   constructor(animalTypes) {
     this.types = animalTypes;
@@ -91,10 +104,10 @@ class DataButton {
   }
 
   handler() {
-    if (this.input.value <= 0 || !this.input.value) {
-      errorMessage.add('Необходимо указать число больше 0', this.input);
-    } else if (this.input.value > 1000 ) {
-      errorMessage.add('Необходимо указать число не больше 1000', this.input);
+    if (this.input.value <= Validate.value.MIN || !this.input.value) {
+      errorMessage.add(Validate.message.min, this.input);
+    } else if (this.input.value > Validate.value.MAX ) {
+      errorMessage.add(Validate.message.min, this.input);
     } else {
       errorMessage.remove(this.input);
       if (this.reviewBlock.result.textContent) {
@@ -121,7 +134,7 @@ class ResultButton {
 
   handler() {
     if (!this.reviewBlock.data.textContent) {
-      errorMessage.add('Необходимо сгенерировать данные', this.input);
+      errorMessage.add(Validate.message.noData, this.input);
     } else {
       errorMessage.remove(this.input);
       this.reviewBlock.result.textContent = this.getResult();
