@@ -5,13 +5,47 @@ body {
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+li {
+  box-sizing: border-box;
+  width: 110px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+
+  font-weight: 600;
+  border-radius: 15px;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+li:hover {
+  background-color: #403866;
+}
+
 a {
   text-decoration: none;
   color: black;
+}
+
+li:hover a {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 5%;
 }
