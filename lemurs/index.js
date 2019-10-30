@@ -4,7 +4,6 @@ const Validate = {
     MAX: 1000
   }
 }
-
 Validate.message = {
   min: 'Необходимо указать число больше ' + Validate.value.MIN,
   max: 'Необходимо указать число не больше ' + Validate.value.MAX,
@@ -15,17 +14,17 @@ class Animal {
   constructor(animalTypes) {
     this.types = animalTypes;
     this.typesNumber = {};
-    animalTypes.forEach(function (type) {
+    animalTypes.forEach((type) => {
       this.typesNumber[type] = 0;
-    }.bind(this));
+    })
   }
 
   getPopularType() {
     let types = this.randomTypes.split('\n');
     types.pop();
-    types.forEach(function (type) {
+    types.forEach((type) => {
       this.typesNumber[type]++
-    }.bind(this));
+    });
 
     let popularType = [];
     let maxValue = Math.max(...Object.values(this.typesNumber));
@@ -70,14 +69,14 @@ class Error {
   add(text) {
     this.element.textContent = text;
     this.element.classList.add('error-show');
-    this.input.style.border = '2px solid red';
+    this.input.style.boxShadow = '0 0 0 2px red';
   }
 
   remove() {
     if (this.element.classList.contains('error-show')) {
       this.element.classList.remove('error-show');
       this.element.textContent = '';
-      this.input.style.border = 'none';
+      this.input.style.boxShadow = 'none';
     }
   }
 }
