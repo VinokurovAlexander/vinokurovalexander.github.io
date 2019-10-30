@@ -1,0 +1,115 @@
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+}
+
+table {
+  width: 100%;
+  min-height: 250px;
+
+  border-spacing: 5px;
+}
+
+thead {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+table td {
+  box-sizing: border-box;
+  width: 320px;
+  padding: 15px 20px;
+
+  background-color: white;
+  border-radius: 35px;
+  vertical-align: top;
+}
+
+thead {
+  text-align: center;
+}
+
+form {
+  display: flex;
+
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 393px;
+  padding: 18px 15px;
+
+  border-radius: 35px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+button {
+  box-sizing: border-box;
+  max-width: 198px;
+  padding: 10px 15px;
+
+  border-radius: 35px;
+  border: none;
+  background-color: #827ffe;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #403866;
+}
+
+label {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  z-index: -1;
+
+  width: 361px;
+  height: 50px;
+
+  color: red;
+}
+
+.error-show {
+  animation: error-show 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes error-show {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-55%);
+  }
+}
+
+.data {
+  flex-flow: column wrap;
+
+  width: 112px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.generate-btn {
+  margin-left: auto;
+  margin-right: 5px;
+}
