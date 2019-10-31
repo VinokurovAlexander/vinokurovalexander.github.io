@@ -32,6 +32,10 @@ li:hover {
   background-color: #403866;
 }
 
+li:nth-child(4n) {
+  margin-right: 0;
+}
+
 a {
   text-decoration: none;
   color: black;
