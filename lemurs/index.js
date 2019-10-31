@@ -106,7 +106,7 @@ class DataButton {
     if (this.input.value <= Validate.value.MIN || !this.input.value) {
       errorMessage.add(Validate.message.min, this.input);
     } else if (this.input.value > Validate.value.MAX ) {
-      errorMessage.add(Validate.message.min, this.input);
+      errorMessage.add(Validate.message.max, this.input);
     } else {
       errorMessage.remove(this.input);
       if (this.reviewBlock.result.textContent) {
