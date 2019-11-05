@@ -232,8 +232,7 @@ body {
     transform: translate(-50%, -50%) rotate(90deg); }
 
 .description-list__item:hover .description-list__wrapper {
-  visibility: visible;
-  opacity: 1; }
+  display: flex; }
 
 .description-list__item:hover::after,
 .description-list__item:hover::before {
@@ -242,14 +241,11 @@ body {
 .description-list__wrapper {
   position: absolute;
   z-index: 25;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 440px;
   border-top: 3px solid #ee3b33;
-  border-bottom: 3px solid #ee3b33;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease; }
+  border-bottom: 3px solid #ee3b33; }
 
 .description-list__item--exhaust {
   left: -5px;
@@ -680,7 +676,11 @@ body {
   flex-direction: column;
   align-items: center;
   width: 916px;
-  margin: 0 auto; }
+  min-height: 519px;
+  margin: 0 auto;
+  background-image: url("../img/moto-360-view.png");
+  background-repeat: no-repeat;
+  background-position: center; }
   .moto-360-view:hover {
     cursor: pointer; }
 
