@@ -1,0 +1,857 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-sans-pro-regular.woff2") format("woff2"), url("../fonts/source-sans-pro-regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald-regular.woff2") format("woff2"), url("../fonts/oswald-regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/oswald-bold.woff2") format("woff2"), url("../fonts/oswald-bold.woff") format("woff"); }
+
+body {
+  width: 1492px;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 209px;
+  padding: 18px 40px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ee3b33;
+  border: 3px solid #ee3b33;
+  border-radius: 5px; }
+  .btn:hover {
+    opacity: 0.8; }
+  .btn:active {
+    opacity: 0.5; }
+
+.btn--secondary {
+  background-color: transparent;
+  color: #ee3b33; }
+  .btn--secondary:hover {
+    opacity: 1;
+    background-color: #ee3b33;
+    color: #ffffff; }
+  .btn--secondary:active {
+    opacity: 0.8; }
+
+.link {
+  font-size: 12px;
+  line-height: 27px;
+  color: #787e89;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.5s ease; }
+  .link:hover {
+    color: #ebebeb; }
+  .link:active {
+    opacity: 0.5; }
+
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #212327;
+  text-transform: uppercase; }
+
+.site-list__item {
+  box-sizing: border-box; }
+  .site-list__item:hover {
+    border-bottom: 3px solid #ee3b33;
+    cursor: pointer; }
+
+.site-logo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 99px;
+  background-color: #ee3b33; }
+
+.site-logo__text {
+  font-family: "Oswald", sans-serif;
+  font-size: 9px;
+  line-height: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.site-logo__image {
+  margin-top: -8px; }
+
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 101px;
+  left: -2px;
+  display: none;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  width: 1492px;
+  padding: 0 99px;
+  border-bottom: 1px solid #dadfe6; }
+
+.sub-menu__item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 340px;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  margin-right: 123px; }
+  .sub-menu__item:hover {
+    padding-bottom: 16px;
+    border-bottom: 3px solid #ee3b33;
+    cursor: pointer; }
+  .sub-menu__item:nth-child(5n) {
+    margin-right: 0; }
+
+.sub-menu__moto-name {
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.sub-menu__img {
+  margin-bottom: 16px; }
+
+.secondary-menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 414px; }
+
+.secondary-menu-list__link {
+  font-size: 10px; }
+
+.secondary-menu-list__item {
+  margin-right: 24px; }
+  .secondary-menu-list__item:nth-child(5n) {
+    margin-right: 0; }
+
+.year-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 225px;
+  color: #81848a;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase; }
+
+.year-list__item {
+  width: 30px;
+  padding: 0 15px; }
+
+.year-list__label:hover {
+  cursor: pointer;
+  color: #ee3b33; }
+
+.year-list__input:checked + .year-list__label {
+  color: #ee3b33; }
+
+.year-list__item--border {
+  border-right: 2px solid #eaecf1; }
+
+.description-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.description-list__item {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background-color: #ee3b33;
+  box-shadow: 0 0 0 1px #fac3c1;
+  transition: all 0.5s ease; }
+  .description-list__item:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    border-color: #ee3b33;
+    box-shadow: 0 0 0 1px #ee3b33; }
+  .description-list__item:active {
+    opacity: 0.5; }
+  .description-list__item:after, .description-list__item:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.5s ease; }
+  .description-list__item:before {
+    transform: translate(-50%, -50%) rotate(90deg); }
+
+.description-list__item:hover .description-list__wrapper {
+  display: flex; }
+
+.description-list__item:hover::after,
+.description-list__item:hover::before {
+  background-color: #ee3b33; }
+
+.description-list__wrapper {
+  position: absolute;
+  z-index: 25;
+  display: none;
+  flex-direction: column;
+  width: 440px;
+  border-top: 3px solid #ee3b33;
+  border-bottom: 3px solid #ee3b33; }
+
+.description-list__item--exhaust {
+  left: -5px;
+  top: 255px; }
+
+.description-list__item--exhaust .description-list__wrapper {
+  bottom: -156px;
+  left: 52px; }
+
+.description-list__item .description-list__wrapper::after {
+  content: "";
+  position: absolute;
+  border: 20px solid #ee3b33; }
+
+.description-list__item--exhaust .description-list__wrapper::after {
+  top: 248px;
+  left: -20px;
+  border-left-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+.description-list__item--look {
+  top: 70px;
+  right: 100px; }
+
+.description-list__item--suspension {
+  top: 249px;
+  right: 2px; }
+
+.description-list__item--suspension .description-list__wrapper {
+  bottom: -156px;
+  right: 52px; }
+
+.description-list__item--suspension .description-list__wrapper:after {
+  top: 248px;
+  right: -20px;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+.description-list__item--look .description-list__wrapper {
+  top: -8px;
+  right: 52px;
+  border-top-width: 0; }
+
+.description-list__item--look .description-list__wrapper::after {
+  top: 0;
+  right: -20px;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+.description-list__title {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  padding-top: 11px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #ee3b33; }
+
+.description-list__text {
+  margin: 0;
+  padding: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: #212327;
+  background-color: #ffffff; }
+
+.color-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px; }
+
+.color-list__item {
+  margin-right: 22px; }
+
+.color-list__label {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #fffafa;
+  box-shadow: 0 0 0 1px #cbcccf;
+  transition: all 0.5s ease; }
+  .color-list__label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #f05149; }
+
+#blue-gray:checked ~ .moto-description__info label[for="blue-gray"],
+#black-gray:checked ~ .moto-description__info label[for="black-gray"],
+#yellow-gray:checked ~ .moto-description__info label[for="yellow-gray"] {
+  box-shadow: 0 0 0 1px #f05149; }
+
+.color-list__label--blue-gray {
+  background: linear-gradient(#5c68b5 50%, #adacaa 50%); }
+
+.color-list__label--black-gray {
+  background: linear-gradient(#545351 50%, #adacaa 50%); }
+
+.color-list__label--yellow-gray {
+  background: linear-gradient(#f5cc22 50%, #383735 50%); }
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 991px;
+  margin: 0 auto;
+  padding-bottom: 35px; }
+
+.slider-list::after {
+  content: "";
+  position: absolute;
+  left: 37px;
+  bottom: 17px;
+  z-index: 5;
+  width: 916px;
+  height: 1px;
+  background-color: #e3e3e3; }
+
+.slider-list__item {
+  position: relative;
+  width: 63px;
+  margin-right: 169px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #212327;
+  text-transform: uppercase; }
+  .slider-list__item:nth-child(5n) {
+    margin-right: 0; }
+
+.slider-list__label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center; }
+  .slider-list__label:hover {
+    cursor: pointer; }
+
+.slider-list__label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -23px;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 13px;
+  height: 13px;
+  background-color: #c8c8c8;
+  border-radius: 50%;
+  transition: background-color 0.4s ease; }
+
+.slider-list__label:hover::after {
+  background-color: black; }
+
+.slider-list__label:hover .slider-list__icon {
+  fill: black; }
+
+.slider-list__icon {
+  margin-bottom: 12px;
+  fill: #d2d2d2;
+  transition: fill 0.4s ease; }
+
+.slider-list__icon--power,
+.slider-list__icon--life {
+  margin-top: -5px; }
+
+.slider-list__input:checked + .slider-list__label::after {
+  background-color: #ee3b33; }
+
+.slider-list__input:checked + .slider-list__label .slider-list__icon {
+  fill: #ee3b33; }
+
+.sponsors-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 916px;
+  margin: 0 auto;
+  padding: 0 31px; }
+
+.sponsors-list__item {
+  max-width: 195px;
+  margin-right: 90px; }
+  .sponsors-list__item:nth-child(4n) {
+    margin-right: 0; }
+  .sponsors-list__item:nth-child(2) {
+    margin-right: 66px; }
+
+.sponsors-list__link {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: bold;
+  opacity: 0.5;
+  color: #212327;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.5s ease; }
+  .sponsors-list__link:hover {
+    opacity: 1; }
+  .sponsors-list__link:active {
+    opacity: 0.3; }
+
+.menu-list {
+  font-size: 16px;
+  line-height: 19px; }
+
+.menu-list__item {
+  max-width: 215px;
+  padding: 0 39px;
+  padding-top: 41px; }
+
+.menu-list__item:hover .sub-menu {
+  display: flex;
+  flex-flow: row wrap; }
+
+.link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 740px;
+  height: 145px; }
+
+.link-list__item {
+  width: 115px;
+  margin-right: 51px; }
+  .link-list__item:nth-child(n + 16) {
+    margin-right: 0; }
+
+.link-list__item--long {
+  width: 125px; }
+
+.nav {
+  background-image: url("../img/yamaha-logo-long.png");
+  background-repeat: no-repeat;
+  background-position: right 20% top 43%; }
+
+.nav__list {
+  margin-left: 177px; }
+
+.main-nav__wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #dadfe6; }
+
+.main-nav__menu-list {
+  margin-right: 271px; }
+
+.nav-secondary {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 9px 177px; }
+
+.nav-secondary__copyright {
+  width: 265px;
+  font-size: 10px;
+  line-height: 27px;
+  color: #787e89;
+  text-transform: uppercase; }
+
+.nav-secondary__copyright {
+  margin: 0; }
+
+.user-list__item {
+  max-width: 165px;
+  padding: 0 20px;
+  padding-top: 43px; }
+
+.moto-description {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin-left: 168px;
+  margin-right: 190px; }
+
+.moto-description__info {
+  width: 450px; }
+
+#blue-gray:checked ~ .moto-description__image {
+  background-image: url("../img/bg-power.png"), url("../img/moto_blue.png"); }
+
+#black-gray:checked ~ .moto-description__image {
+  background-image: url("../img/bg-power.png"), url("../img/moto_black.png"); }
+
+#yellow-gray:checked ~ .moto-description__image {
+  background-image: url("../img/bg-power.png"), url("../img/moto_yellow.png"); }
+
+.moto-image {
+  position: relative;
+  width: 593px;
+  height: 498px;
+  background-repeat: no-repeat;
+  background-position: left top, right bottom 11%;
+  transition: background-image 0.5s ease; }
+
+.moto-image__picture {
+  margin-top: 58px;
+  padding-left: 8px; }
+
+.moto-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; }
+
+.moto-info__title {
+  max-width: 225px;
+  margin-top: -4px;
+  margin-bottom: 3px;
+  font-size: 75px;
+  line-height: 93px;
+  color: #212327;
+  text-transform: uppercase; }
+
+.moto-info__year-list {
+  margin-top: 39px;
+  margin-left: 18px; }
+
+.moto-info__price {
+  width: 90px;
+  margin-top: 0;
+  margin-left: 9px;
+  margin-bottom: 29px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #81848a;
+  text-transform: uppercase; }
+
+.moto-info__price-number {
+  display: block;
+  font-size: 25px;
+  line-height: 30px;
+  color: #212327; }
+
+.moto-info__color-list {
+  margin-left: 8px;
+  margin-bottom: 32px; }
+
+.moto-info__text {
+  margin: 0;
+  margin-left: 7px;
+  margin-bottom: 30px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  color: #212327; }
+
+.moto-info__btn-wrapper {
+  margin-left: 8px; }
+
+.moto-info__btn {
+  margin-right: 11px; }
+  .moto-info__btn:nth-child(even) {
+    margin-right: 0; }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  width: 916px;
+  margin: 0 auto; }
+
+.features__wrapper {
+  width: 435px; }
+
+.features__image {
+  margin-left: 31px;
+  margin-top: 16px;
+  margin-right: 90px; }
+
+.features__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #212327;
+  text-transform: uppercase; }
+
+.features__item {
+  padding: 25px 0; }
+
+.features__text {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: #212327; }
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 514px; }
+
+.photos:hover .photos__image {
+  opacity: 0.3; }
+
+.photos:hover .photos__image:hover {
+  opacity: 1; }
+
+.photos__image {
+  transition: 0.8s opacity; }
+  .photos__image:hover {
+    cursor: pointer; }
+
+.moto-360-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 916px;
+  min-height: 519px;
+  margin: 0 auto;
+  background-image: url("../img/moto-360-view.png");
+  background-repeat: no-repeat;
+  background-position: center; }
+  .moto-360-view:hover {
+    cursor: pointer; }
+
+.moto-360-view__btn {
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #212327;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.moto-360-view__btn:hover .moto-360-view__icon {
+  -webkit-animation: rotator linear .8s infinite;
+          animation: rotator linear .8s infinite; }
+
+@-webkit-keyframes rotator {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes rotator {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.moto-360-view__icon {
+  margin-right: 12px; }
+
+.spin-icon {
+  position: relative;
+  width: 19px;
+  height: 15px;
+  border: 2px solid #212327;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%; }
+
+.spin-icon::after,
+.spin-icon::before {
+  position: absolute;
+  content: "";
+  border: 5px solid #212327; }
+
+.spin-icon::after {
+  right: 1px;
+  top: -2px;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-left-color: transparent; }
+
+.spin-icon::before {
+  left: 1px;
+  bottom: -2px;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-right-color: transparent; }
+
+.page-main {
+  width: 1492px;
+  padding-top: 275px;
+  margin: 0 auto;
+  margin-bottom: 90px; }
+
+.page-main__list {
+  margin-bottom: 78px; }
+
+.page-main__slider {
+  margin-bottom: 48px; }
+
+.page-main__description {
+  margin-bottom: 110px; }
+
+.page-main__photos {
+  margin-bottom: 40px; }
+
+.page-main__moto-360-view {
+  margin-bottom: 84px; }
+
+.page-main__sponsors {
+  margin-bottom: 70px; }
+
+.shop {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 790px;
+  margin: 0 auto; }
+
+.shop__image {
+  margin-bottom: 22px; }
+
+.shop__item {
+  margin-right: 103px;
+  padding: 2px; }
+  .shop__item:nth-child(3n) {
+    margin-right: 0; }
+  .shop__item:hover {
+    padding: 0;
+    border: 2px solid #bdb9b9;
+    border-radius: 4px; }
+
+.shop__item--gloves {
+  margin-left: 28px; }
+  .shop__item--gloves .shop__image {
+    margin-top: 28px; }
+
+.shop__item--jacket {
+  margin-right: 119px; }
+  .shop__item--jacket .shop__image {
+    margin-bottom: 0; }
+  .shop__item--jacket .shop__product-name {
+    margin-left: 13px;
+    margin-top: -2px;
+    margin-bottom: 4px; }
+  .shop__item--jacket .shop__product-price {
+    margin-left: 13px; }
+
+.shop__item--helmet .shop__image {
+  margin-top: 10px;
+  margin-bottom: 19px; }
+
+.shop__item--helmet .shop__product-name {
+  margin-left: 17px;
+  margin-bottom: 3px; }
+
+.shop__item--helmet .shop__product-price {
+  margin-left: 16px; }
+
+.shop__product-name {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #212327;
+  text-transform: uppercase; }
+
+.shop__link {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none; }
+
+.shop__product-price {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #8d9095;
+  text-transform: uppercase; }
+
+.page-footer {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-bottom: 72px;
+  background-color: #212327; }
+
+.page-footer__nav-secondary {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #191a1e; }
+
+.cloudimage-inner-box canvas {
+  width: 500px;
+  height: 500px; }
+
+/*# sourceMappingURL=style.css.map */
