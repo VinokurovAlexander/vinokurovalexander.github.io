@@ -1,1 +1,0 @@
-"use strict";window.onscroll=function(){var e=document.querySelector(".main-nav"),a=document.querySelector(".page-header");document.querySelector(".main-menu");window.pageYOffset>50?(e.classList.add("main-nav--fixed"),a.classList.add("page-header--scroll")):(e.classList.remove("main-nav--fixed"),a.classList.remove("page-header--scroll"))};
